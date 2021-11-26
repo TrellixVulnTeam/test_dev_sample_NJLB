@@ -5,10 +5,11 @@
     <title>登录</title>
 
     <h3>测试平台</h3>
-    <form action="/login_action" method="get">
+    <form action="/login_action/" method="post">
      账号: <input type="text" name="username" /><br>
      密码: <input type="password" name="password" /><br>
      {{error}}<br>
+     {% csrf_token %}
   <input type="submit" value="Submit" />
 </form>
 
