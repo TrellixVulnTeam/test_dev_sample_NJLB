@@ -11,6 +11,12 @@ def project_manage(request):
     project_all = Project.objects.all()
     return render(request, "project_manage.html",{
         'user':username,
-        'projects':project_all
+        'projects':project_all,
+        "type":"list"
     })
 
+
+@login_required 
+def add_project(request):
+    
+    return render(request, "project_manage.html",{"type":"add"})
